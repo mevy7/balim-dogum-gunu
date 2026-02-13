@@ -1,123 +1,42 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>İyi ki Doğdun Anıl 💛</title>
-
-<style>
-body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1e1e2f, #2c2c54);
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    color: white;
-    overflow-x: hidden;
-}
-
-.container {
-    padding: 30px;
-}
-
-h1 {
-    font-size: 40px;
-    margin-top: 20px;
-    animation: glow 2s infinite alternate;
-}
-
-@keyframes glow {
-    from { text-shadow: 0 0 10px #ff4da6; }
-    to { text-shadow: 0 0 20px #ff99cc; }
-}
-
-img {
-    width: 280px;
-    border-radius: 20px;
-    margin-top: 20px;
-    box-shadow: 0 0 20px pink;
-}
-
-button {
-    margin-top: 30px;
-    padding: 15px 25px;
-    font-size: 18px;
-    border: none;
-    border-radius: 30px;
-    background: #ff4da6;
-    color: white;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
-}
-
-.message {
-    margin-top: 30px;
-    font-size: 22px;
-    display: none;
-}
-
-/* Kalpler */
-.heart {
-    position: fixed;
-    bottom: -10px;
-    color: pink;
-    animation: floatUp 5s linear infinite;
-}
-
-@keyframes floatUp {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100vh); opacity: 0; }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day card</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Annie+Use+Your+Telescope&family=Petemoss&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div class="envelope">
+        <div class="envelope-lid"></div>
+        <div class="envelope-lid envelope-lid-secondary"></div>
+        <div class="card-wrapper">
+            <div class="card">
+                <div class="card-cover">
+                    <div class="card-side card-side-primary">
+                        <h1 class="card-title">
+                            <span class="card-title-secondary">Happy</span>
+                            <span class="card-title-main">Valentine <span
+                                    class="card-title-apostrophe">❤️</span>s</span>
+                            <span class="card-title-secondary">Day</span>
+                        </h1>
+                    </div>
+                    <div class="card-side card-side-secondary"></div>
+                </div>
+                <div class="card-body">
+                    <p>To my love,</p>
+                    <p>From the moment I first saw you, I knew I wanted to smell
+                        your farts forever. Here's to a lifetime of love, laughter, and questionable air quality —
+                    </p>
+                    <p>Happy Valentine's Day!</p>
+                </div>
+            </div>
+        </div>
+        <div class="heart-seal"></div> </div>
 
-<div class="container">
-    <h1>İyi ki Doğdun Anıl 🎂</h1>
-    <h2>23 yaşın sana mutluluk getirsin 💛</h2>
-
-    <img src="images/full-image.png" alt="Bizim Fotoğrafımız">
-
-    <br>
-    <button onclick="surprise()">Sürprizi Aç 🎉</button>
-
-    <div class="message" id="specialMessage">
-        Seni her şeyden çok seviyorum bitanem.  
-        İyi ki doğdun 💛  
-        Hayatımın en güzel parçasısın.
-    </div>
-
-    <audio id="music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
-</div>
-
-<script>
-function surprise() {
-    document.getElementById("specialMessage").style.display = "block";
-    document.getElementById("music").play();
-    createHearts();
-}
-
-function createHearts() {
-    for (let i = 0; i < 30; i++) {
-        let heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "💖";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = Math.random() * 20 + 20 + "px";
-        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
-        document.body.appendChild(heart);
-
-        setTimeout(() => {
-            heart.remove();
-        }, 5000);
-    }
-}
-</script>
-
+       <script  src="./script.js"></script>
 </body>
 </html>
